@@ -24,6 +24,8 @@ const app = express();
 const login = require('./routes/home');
 const register = require('./routes/registerUser');
 const Register = require('./models/registerModel');
+const dashboard = require('./routes/dashboardRoute');
+const parking = require('./routes/registerParking');
 
 // Establish a connection to the database
 mongoose.connect(config.database);
@@ -62,6 +64,8 @@ passport.deserializeUser(Register.deserializeUser());
 // Routes
 app.use('/', login);
 app.use('/', register);
+app.use('/', dashboard);
+app.use('/', parking);
 
 // Sends a message incase of a page is not found
 app.get('*', (req, res) => {
