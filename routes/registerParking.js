@@ -42,7 +42,7 @@ router.post('/registerParking', (req, res) => {
             }
             else {
                 console.log('Parking Saved');
-                res.redirect('/dashboard');
+                res.redirect('/parkingReport');
             }
         });
     }
