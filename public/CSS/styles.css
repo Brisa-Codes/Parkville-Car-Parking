@@ -303,3 +303,20 @@ select {
     background: none;
     color: #000;
 }
+
+.parking-table {
+    background: grey;
+}
+
+tr {
+    border-bottom: #000 solid 1px;
+}
+
+th {
+    font-size: 16px;
+    color: #6c6c6c;
+}
+
+td {
+    font-size: 14px;
+}
