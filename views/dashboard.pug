@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dashboard
+  script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/public/CSS/styles.css')
+.header
+  .header-wrapper
+    .nav
+      a.nav-link-logo(href='/')
+        i.fas.fa-car
+        span Parkville
+      a.nav-link(href='/login.pug')
+        i.fas.fa-car
+        span Parking
+      a.nav-link(href='/login.pug')
+        i.fas.fa-car-battery
+        span Battery Shop
+      a.nav-link(href='/login.pug')
+        i.far.fa-circle
+        span Tyre Clinic
+  .dash-wrapper
+    .dash-btn
+      a(href='/login')
+        i.fas.fa-power-off
+        span LogOut
+    .dashboard
+      .dash-card
+        p Cars
+      .dash-card
+        p Battery Shop
+    .dashboard
+      .dash-card
+        p Trye Clinic
+      .dash-card
+        p Managers

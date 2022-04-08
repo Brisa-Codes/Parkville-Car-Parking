@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background-color: #f5f5f5;
+}
+
+:root {
+    --main-color: #8b54ff;
+    --secondary-color: #6c6c6c;
+    --input-bg: #c4c4c4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-wrapper {
+    height: 100vh;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 40px 0;
+}
+
+.login-intro i {
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+}
+
+.login-intro h1 {
+    color: var(--main-color);
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-intro p {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.car-img img {
+    width: 450px;
+    height: 600px;
+    padding: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    border: 1px solid #6c6c6c;
+    border-radius: 8px;
+    outline: none;
+}
+
+::placeholder {
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+a {
+    font-size: 16px;
+}
+
+.form-pass {
+    display: flex;
+}
+
+.form-pass a {
+    padding: 10px;
+    color: var(--main-color);
+}
+
+#checkbox {
+    font-size: 12px;
+}
+
+.form-pass {
+    padding-bottom: 10px;
+}
+
+button {
+    border: none;
+    background: none;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--main-color);
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+.register-btn {
+    display: flex;
+    align-items: center;
+}
+
+.call-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.call-btn button {
+    margin: 0 20px 0 0;
+}
+
+.header {
+    display: flex;
+}
+
+.header-wrapper {
+    width: 25%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-left: 40px;
+    color: var(--secondary-color);
+    height: 100vh;
+    border-right: 2px solid var(--secondary-color);
+}
+
+.nav-link-logo {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.nav-link:hover {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 12px;
+}
+
+.nav i:hover {
+    color: #fff;
+}
+
+.nav a {
+    padding: 12px 6px;
+    color: var(--secondary-color);
+}
+
+.nav i {
+    padding: 0 6px;
+    color: var(--secondary-color);
+}
+
+.dashboard {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dash-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dash-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.dash-btn a {
+    color: var(--secondary-color);
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dash-btn i {
+    padding: 0 10px;
+}
+
+
+
+.dash-card {
+    background-color: var(--secondary-color);
+    border: 1px solid #000;
+    border-radius: 12px;
+    width: 240px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.dash-card p {
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+}
+
+.battery-nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.battery-nav a {
+    padding: 0 10px;
+    color: var(--secondary-color);
+}
+
+.battery-nav i {
+    padding: 0 10px;
+}
+
+.parking-form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.parking-form-wrapper h3 {
+    text-align: center;
+    font-size: 18px;
+    color: var(--secondary-color);
+    padding: 40px 0 0 0;
+}
+
+fieldset {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+fieldset input {
+    width: 300px;
+}
+
+select {
+    padding: 12px;
+    background: none;
+    border-radius: 12px;
+    border: none;
+    border: 1px solid #6c6c6c;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+.form-btns button {
+    cursor: pointer;
+    margin: 0 20px 0 0;
+}
+
+.back-btn {
+    background: none;
+    color: #000;
+}

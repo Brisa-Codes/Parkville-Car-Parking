@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sign Up Form || Parking App
+  link(rel='stylesheet' href='/css/styles.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous' referrerpolicy='no-referrer')
+.container
+  .container-wrapper
+    // Login Image
+    .car-img
+      img(src='/IMG/signup.png' alt='signup')
+    // Form
+    .login-wrapper
+      .login-form
+        .login-intro
+          i.fa-solid.fa-car
+          h1 Welcome to Parkville
+          p Please Sign Up and Create your new account
+        form(method='POST' action='/register')
+          .form-group
+            label(for='username') Username
+            input#username.form-control(type='text' name='username' placeholder='Your Name')
+          .form-group
+            label(for='username') Email
+            input#email.form-control(type='email' name='email' placeholder='Email')
+          .form-group
+            label(for='password') Password
+            input#password.form-control(type='password' name='password' placeholder='Password')
+          .form-group
+            label(for='password') Comfirm Password
+            input#comfirm.form-control(type='password' name='comfirm' placeholder='Comfirm Password')
+          .form-group.call-btn
+            button.btn.btn-primary(type='submit' name='register') Register
+    // Form End
