@@ -56,10 +56,16 @@ a {
     color: var(--secondary-color);
 }
 
+.car-img {
+    padding-top: 20px;
+}
+
 .car-img img {
-    width: 450px;
-    height: 600px;
+    width: 70%;
+    height: 60vh;
     padding: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .form-group {
@@ -148,6 +154,7 @@ button:hover {
 
 .header-wrapper {
     width: 25%;
+    background-color: #0D324D;
 }
 
 .nav {
@@ -167,6 +174,12 @@ button:hover {
     color: var(--main-color);
 }
 
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .nav-link:hover {
     padding: 6px 12px;
     color: #fff;
@@ -180,12 +193,12 @@ button:hover {
 
 .nav a {
     padding: 12px 6px;
-    color: var(--secondary-color);
+    color: white;
 }
 
 .nav i {
     padding: 0 6px;
-    color: var(--secondary-color);
+    color: white;
 }
 
 .dashboard {
@@ -201,6 +214,7 @@ button:hover {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    background-color: #DFDFDE;
 }
 
 .dash-btn {
@@ -242,22 +256,24 @@ button:hover {
     font-size: 16px;
 }
 
-.battery-nav {
+.parking-nav {
     display: flex;
     justify-content: space-around;
-    padding-top: 40px;
+    padding: 40px 0;
+    background-color: #032B43;
 }
 
-.battery-nav a {
+.parking-nav a {
     padding: 0 10px;
-    color: var(--secondary-color);
+    color: #F3E9DD
 }
 
-.battery-nav i {
+.parking-nav i {
     padding: 0 10px;
 }
 
 .parking-form-wrapper {
+    background-color: #DFDFDE;
     display: flex;
     justify-content: center;
 }
@@ -305,18 +321,60 @@ select {
 }
 
 .parking-table {
-    background: grey;
+    background: #EEEEEE;
+    padding: 20px;
+    /* margin: 40px;
+    width: 70%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.parking-report {
+    padding: 20px;
+    background: #DFDFDE;
+}
+
+.parking-title {
+    font-size: 18px;
+    text-align: center;
+    color: #8b54ff;
+    padding: 20px 0;
+}
+
+.parking-report-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20%;
+}
+
+.parking-report-details h3 {
+    margin: 0 20px;
 }
 
 tr {
-    border-bottom: #000 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
 }
 
 th {
+    display: flex;
     font-size: 16px;
-    color: #6c6c6c;
+    text-align: start;
+    color: var(--secondary-color);
+    flex-direction: column;
 }
 
 td {
-    font-size: 14px;
+    display: flex;
+    font-size: 16px;
+    text-align: start;
+    color: var(--secondary-color);
+    flex-direction: column;
+}
+
+tbody {
+    width: 100%;
 }
