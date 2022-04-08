@@ -1,0 +1,74 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Register Parking
+  script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/CSS/styles.css')
+.battery-nav
+  .nav-wrapper
+    a.nav-link-logo(href='/')
+      i.fas.fa-car
+      span Parkville
+  .nav-wrapper-mid
+    a.nav-link(href='#')
+      span Home
+    a.nav-link(href='#')
+      span Customer Details
+  .nav-wrapper-log
+    a(href='/')
+      i.fas.fa-power-off
+      span LogOut
+.parking-form-wrapper
+  form(method="POST" action='/registerParking')
+    h3 Register Parking
+    fieldset
+      label(for='cartype') Car Type
+      select#cartype(name='cartype')
+        option(value='' required='') Select Car Type
+        option(value='trucks') Trucks
+        option(value='personalCars') Personal Cars
+        option(value='taxis') Taxis
+        option(value='coasters') Coasters
+        option(value='bodas') Boda Bodas
+    br
+    fieldset
+      label(for='name') Name
+      input(type='text' name='name')
+    fieldset
+      label(for='numberplate') No. Plate
+      input(type='text' name='numberplate')
+    fieldset
+      label(for='phonenumber') Phone Number
+      input(type='number' name='phonenumber')
+    fieldset
+      label(for='arrivaltime') Time of Arrival
+      input(type='datetime-local' name='arrivaltime')
+    fieldset
+      label(for='model') Model
+      input(type='text' name='carmodel')
+    fieldset
+      label(for='color') color
+      input(type='text' name='color')
+    fieldset
+      label(for='parkingtime') Time of Parking
+      select#timeparking(name='parkingtime' type='text')
+        option(value='' required='') Select Time of Parking
+        option(value='day') Day
+        option(value='night') Night
+    br
+    fieldset
+      label(for='parkingfee') Parking Fee
+      select#parkingfee(name='parkingfee' type='number')
+        option(value='' required='') Choose Parking Fee
+        option(value='1000') 1,000 UGX
+        option(value='2000') 2,000 UGX
+        option(value='3000') 3,000 UGX
+        option(value='4000') 4,000 UGX
+        option(value='5000') 5,000 UGX
+        option(value='10,000') 10,000 UGX
+    br
+    fieldset.form-btns
+      button.btn.btn-primary(type='submit' name='login') Register
+      button.btn.back-btn(type='submit' name='login') Clear

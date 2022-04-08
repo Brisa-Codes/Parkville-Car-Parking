@@ -35,8 +35,8 @@
         <form action="">
             <h3>Register Parking</h3>
             <fieldset>
-                <label for="carType">Car Type</label>
-                <select name="carType" id="carType">
+                <label for="cartype">Car Type</label>
+                <select name="cartype" id="cartype">
                     <option value="" required>Select Car Type</option>
                     <option value="trucks">Trucks</option>
                     <option value="personalCars">Personal Cars</option>
@@ -45,6 +45,7 @@
                     <option value="bodas">Boda Bodas</option>
                 </select>
             </fieldset>
+            <br>
            <fieldset>
             <label for="name">Name</label>
             <input type="text">
@@ -74,16 +75,30 @@
                 <input type="text">
             </fieldset>
             <fieldset>
-                <label for="timeParking">Time of Parking</label>
-                <select name="timeParking" id="timeParking">
+                <label for="timeparking">Time of Parking</label>
+                <select name="timeparking" id="timeparking" type="text">
                     <option value="" required>Select Time of Parking</option>
                     <option value="day">Day</option>
                     <option value="night">Night</option>
                 </select>
             </fieldset>
+            <br>
+            <fieldset>
+                <label for="parkingfee">Parking Fee</label>
+                <select name="parkingfee" id="parkingfee" type="number">
+                    <option value="" required>Choose Parking Fee</option>
+                    <option value="1000">1,000 UGX</option>
+                    <option value="2000">2,000 UGX</option>
+                    <option value="3000">3,000 UGX</option>
+                    <option value="4000">4,000 UGX</option>
+                    <option value="5000">5,000 UGX</option>
+                    <option value="10,000">10,000 UGX</option>
+                </select>
+            </fieldset>
+            <br>
             <fieldset class="form-btns">
                 <button type="submit" name="login" class="btn btn-primary">Login</button>
-                <button type="submit" name="login" class="btn back-btn">Go Back</button>
+                <button type="submit" name="login" class="btn back-btn">Clear</button>
             </fieldset>
         </form>
     </div>

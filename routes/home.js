@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 router.post('/', passport.authenticate('local', { failureRedirect: '/' }),(req, res) => {
 	// console.log("This is the login data", req.body)  prints the user's credentials
 	req.session.user = req.user
-	res.redirect('/register');
+	res.redirect('/dashboard');
 });
 
 module.exports = router;
