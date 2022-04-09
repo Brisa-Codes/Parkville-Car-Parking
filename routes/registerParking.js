@@ -13,6 +13,7 @@ router.post('/registerParking', (req, res) => {
     const cartype = req.body.cartype;
     const name = req.body.name;
     const numberplate = req.body.numberplate;
+    const phonenumber = req.body.phonenumber;
     const arrivaltime = req.body.arrivaltime;
     const carmodel = req.body.carmodel;
     const color = req.body.color;
@@ -29,6 +30,7 @@ router.post('/registerParking', (req, res) => {
             cartype: cartype,
             name: name,
             numberplate: numberplate,
+            phonenumber: phonenumber,
             arrivaltime: arrivaltime,
             carmodel: carmodel,
             color: color,
@@ -41,7 +43,7 @@ router.post('/registerParking', (req, res) => {
                 return;
             }
             else {
-                console.log('Parking Saved');
+               // console.log('Parking Saved');
                 res.redirect('/parkingReport');
             }
         });
