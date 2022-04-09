@@ -6,7 +6,8 @@ const signoffUserSchema = mongoose.Schema({
     },
     receiptno: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     phonenumber: {
         type: String,
