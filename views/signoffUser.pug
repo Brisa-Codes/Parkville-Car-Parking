@@ -12,36 +12,39 @@ head
       i.fas.fa-car
       span Parkville
   .nav-wrapper-mid
-    a.nav-link(href='/')
-      span Home
-    a.nav-link(href='/parkingreport')
-      span Parking Details
+    a.nav-link(href='/dashboard')
+      span Dashboard
+    a.nav-link(href='/signoffReport')
+      span Signoff Report
   .nav-wrapper-log
     a(href='/')
       i.fas.fa-power-off
       span LogOut
 .parking-form-wrapper
-  form(method='POST' action='/signoff')
+  form(method='POST' action='/signoffUser')
     h3 Sign Off a Parking Client
     br
     fieldset
       label(for='name') Name
-      input(type='text')
+      input(type='text' name='name')
     fieldset
       label(for='receiptno') Receipt No.
-      input(type='number')
+      input(type='text' name='receiptno')
     fieldset
-      label(for='name') Phone Number
-      input(type='number')
+      label(for='phonenumber') Phone Number
+      input(type='text' name='phonenumber')
     fieldset
-      label(for='name') Time &amp; Date
-      input(type='datetime-local')
+      label(for='time') Time &amp; Date
+      input(type='datetime-local' name='time')
     fieldset
       label(for='gender') Gender
-      input(type='text')
+      select#gender(name="gender")
+        option(value='') Select Gender
+        option(value="male" required="") Male 
+        option(value="female") Female
     fieldset
       label(for='nin') NIN
-      input(type='text')
+      input(type='text' name="nin")
     fieldset.form-btns
-      button.btn.btn-primary(type='submit' name='login') Login
+      button.btn.btn-primary(type='submit' name='login') Sign Off 
       button.btn.back-btn(type='submit' name='login') Clear

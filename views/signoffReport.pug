@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Parking Report || Parking
+  title Signedoff Cars || Parking
   script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
   link(rel='stylesheet' href='/CSS/styles.css')
 .parking-nav
@@ -23,26 +23,23 @@ head
     h3.parking-title Car Parking Entries
     h3
       button.btn.btn-primary
-        a.nav-link(href='/parking') New Entry
-    h3
-      button.btn.btn-primary
-        a.nav-link(href='/signoffUser') Sign Off
+        a.nav-link(href='/signoffUser') New Entry
   table.parking-table(style='width:100%')
     tr
       th Name
-      th No. Plate
-      th Car Type
-      th Arrival Time
-      th Parking Time
-      th Parking Fee
+      th Receipt No
+      th Phone Number
+      th Time
+      th Gender 
+      th UserNIN
     
-    if parkings.length 
-    each parking in parkings
+    //- if signoffUsers.length 
+    //- each signoffUser in signoffUsers
      tr
-      td #{parking.name}
-      td #{parking.numberplate}
-      td #{parking.cartype}
-      td #{parking.arrivaltime}
-      td #{parking.parkingtime}
-      td #{parking.parkingfee}
+      td #{signoffUser.name}
+      td #{signoffUser.receiptno}
+      td #{signoffUser.phonenumber}
+      td #{signoffUser.time}
+      td #{signoffUser.gender}
+      td #{signoffUser.nin}
      tr
