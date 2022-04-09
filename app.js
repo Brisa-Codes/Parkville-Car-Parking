@@ -27,6 +27,7 @@ const Register = require('./models/registerModel');
 const dashboard = require('./routes/dashboardRoute');
 const parking = require('./routes/registerParking');
 const parkingReport = require('./routes/parkingReport');
+const signoff = require('./routes/signOff');
 
 // Establish a connection to the database
 mongoose.connect(config.database);
@@ -68,6 +69,7 @@ app.use('/', register);
 app.use('/', dashboard);
 app.use('/', parking);
 app.use('/', parkingReport)
+app.use('/', signoff);
 
 // Sends a message incase of a page is not found
 app.get('*', (req, res) => {
