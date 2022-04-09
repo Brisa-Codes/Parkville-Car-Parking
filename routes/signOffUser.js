@@ -41,7 +41,7 @@ router.post('/signoffUser', (req, res) => {
             } 
             else {
                 console.log('Data saved successfully');
-                res.redirect('/signoffUser');
+                res.redirect('/signoffReport');
             }
         });
     }
