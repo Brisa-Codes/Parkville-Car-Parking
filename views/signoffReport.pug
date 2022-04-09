@@ -33,8 +33,8 @@ head
       th Gender 
       th UserNIN
     
-    //- if signoffUsers.length 
-    //- each signoffUser in signoffUsers
+    if signoffUsers.length 
+    each signoffUser in signoffUsers
      tr
       td #{signoffUser.name}
       td #{signoffUser.receiptno}
