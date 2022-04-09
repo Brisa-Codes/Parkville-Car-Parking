@@ -13,6 +13,10 @@ const parkingSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    phonenumber: {
+        type: String,
+        required: true
+    },
     arrivaltime: {
         type: String,
         required: true
