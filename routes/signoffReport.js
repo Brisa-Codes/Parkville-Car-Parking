@@ -6,7 +6,7 @@ router.get('/signoffReport', async(req, res) => {
     try{
         const data = await SignoffUser.find({}).sort({$natural:-1});
         res.render('signoffReport', {
-            signoffs: data
+            signoffUsers: data
         })
     }
     catch(error){

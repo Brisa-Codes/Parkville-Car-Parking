@@ -9,6 +9,7 @@ router.get('/parking', (req, res) => {
     res.render('registerParking');
 });
 
+// Post Route
 router.post('/registerParking', (req, res) => {
     const cartype = req.body.cartype;
     const name = req.body.name;
@@ -21,6 +22,7 @@ router.post('/registerParking', (req, res) => {
     const parkingfee = req.body.parkingfee;
 
     let errors = req.validationErrors();
+    // In case of errors
     if(errors){
         res.render('registerParking')
             // return;    

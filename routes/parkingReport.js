@@ -2,6 +2,7 @@ const express = require('express');
 const Parking = require('../models/parkingModel');
 const router = express.Router();
 
+// Get Route
 router.get('/parkingreport', async(req,res)=>{
     // pick data
     try {

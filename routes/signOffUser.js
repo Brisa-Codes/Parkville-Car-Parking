@@ -11,6 +11,7 @@ router.get('/signoffUser', (req, res) => {
     res.render('signoffUser');
 });
 
+// Post route
 router.post('/signoffUser', (req, res) => {
     const name = req.body.name;
     const receiptno = req.body.receiptno;
@@ -20,7 +21,7 @@ router.post('/signoffUser', (req, res) => {
     const nin = req.body.nin;
 
     let errors = req.validationErrors();
-    // if there are any errors
+    // In case of errors
     if(errors){
         res.render('signoffUser')
         // return
