@@ -20,10 +20,10 @@ const carTyreSchema = mongoose.Schema({
         type: Number,
     },
     puncturefix: {
-        type: Number,
+        type: Number
     },
     valves: {
-        type: Number,
+        type: Number    
     }
 });
 
