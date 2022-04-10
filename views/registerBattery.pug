@@ -1,0 +1,49 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Register Battery || Parkville
+  script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/CSS/styles.css')
+.parking-nav
+  .nav-wrapper
+    a.nav-link-logo(href='/')
+      i.fas.fa-car
+      span Parkville
+  .nav-wrapper-mid
+    a.nav-link(href='/dashboard')
+      span Dashboard
+    a.nav-link(href='/batteryReport')
+      span Battery Entries 
+  .nav-wrapper-log
+    a(href='/')
+      i.fas.fa-power-off
+      span LogOut
+.parking-form-wrapper
+  form(method="POST" action='/registerBattery')
+    h3 Register Battery
+    fieldset
+      label(for='batterysize') Battery Size
+      select#cartype(name='batterysize' type='text')
+        option(value='Default' required='') Select Battery Size 
+        option(value='small') Small
+        option(value='medium') Medium
+        option(value='Large') Large
+    fieldset
+      label(for='name') Name
+      input(type='text' name='name')
+    fieldset
+      label(for='phonenumber') Phone Number
+      input(type='text' name='phonenumber')
+    fieldset
+      label(for='batteryfee') Battery Fee
+      select#parkingfee(name='batteryfee' type='number')
+        option(value='Default' required='') Choose Battery Fee
+        option(value='10000') 10,000 UGX
+        option(value='20000') 20,000 UGX
+        option(value='30000') 30,000 UGX
+    br
+    fieldset.form-btns
+      button.btn.btn-primary(type='submit') Register
+      button.btn.back-btn(type='reset') Clear
