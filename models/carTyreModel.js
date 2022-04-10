@@ -18,15 +18,12 @@ const carTyreSchema = mongoose.Schema({
     },
     tyrepressure: {
         type: Number,
-        required: true
     },
     puncturefix: {
         type: Number,
-        required: true
     },
     valves: {
         type: Number,
-        required: true
     }
 });
 
