@@ -29,6 +29,8 @@ const parking = require('./routes/registerParking');
 const parkingReport = require('./routes/parkingReport');
 const signoffUser = require('./routes/signoffUser');
 const signoffReport = require('./routes/signoffReport');
+const battery = require('./routes/registerBattery');
+const batteryReport = require('./routes/batteryReport');
 
 // Establish a connection to the database
 mongoose.connect(config.database);
@@ -72,6 +74,8 @@ app.use('/', parking);
 app.use('/', parkingReport)
 app.use('/', signoffUser);
 app.use('/', signoffReport);
+app.use('/', battery);
+app.use('/', batteryReport);
 
 // Sends a message incase of a page is not found
 app.get('*', (req, res) => {
