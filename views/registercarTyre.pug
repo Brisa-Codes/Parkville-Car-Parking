@@ -1,0 +1,67 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Register Car Tyre || Parkville
+  script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/CSS/styles.css')
+.parking-nav
+  .nav-wrapper
+    a.nav-link-logo(href='/')
+      i.fas.fa-car
+      span Parkville
+  .nav-wrapper-mid
+    a.nav-link(href='/dashboard')
+      span Dashboard
+    a.nav-link(href='/carTyreReport')
+      span Tyre Entries 
+  .nav-wrapper-log
+    a(href='/')
+      i.fas.fa-power-off
+      span LogOut
+.parking-form-wrapper
+  form(method="POST" action='/registercarTyre')
+    h3 Register Car Tyres 
+    fieldset
+      label(for='name') Name
+      input(type='text' name='name')
+    fieldset
+      label(for='phonenumber') Phone Number
+      input(type='text' name='phonenumber')
+    fieldset
+      label(for='make') Tyre Make
+      input(type='text' name='make')
+    fieldset
+      label(for='tyresize') CarTyre Size
+      select#parkingfee(name='tyresize' type='text')
+        option(value='Default' required='') Choose Car Tyre Fee
+        option(value='R16') 125/70 R16
+        option(value='R15') 135/70 R15
+        option(value='R14') 145/80 R14
+        option(value='R12') 145/80 R12
+    br
+    h3 Car Tyre Services
+    br
+    fieldset
+      label(for='tyrepressure') Tyre Pressure Fee
+      select#tyrepressure(name='tyrepressure' type='number')
+        option(value='Default' required='') Choose Car Tyre Pressure Fee
+        option(value='500') 500 UGX
+        option(value='') Null
+    fieldset
+      label(for='puncturefix') Puncture Fix Fee 
+      select#puncturefix(name='puncturefix' type='number')
+        option(value='Default' required='') Choose Puncture fix Fee
+        option(value='5000') 5000 UGX
+        option(value='') Null
+    fieldset
+      label(for='valves') Valve Fee 
+      select#valves(name='valves' type='number')
+        option(value='Default' required='') Choose Value Fee
+        option(value='5000') 5000 UGX
+        option(value='') Null
+    br
+    fieldset.form-btns
+      button.btn.btn-primary(type='submit') Register
+      button.btn.back-btn(type='reset') Clear
