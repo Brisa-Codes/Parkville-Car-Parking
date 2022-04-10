@@ -20,13 +20,15 @@ head
       span LogOut
 .parking-report
   .parking-report-details 
-    h3.parking-title Car Parking Entries
+    h3.parking-title Parking Entries
     h3
       button.btn.btn-primary
         a.nav-link(href='/parking') New Entry
     h3
       button.btn.btn-primary
         a.nav-link(href='/signoffUser') Sign Off
+    h3
+      button.btn.btn-primary(type='submit' onclick="window.print()") Print Report
   table.parking-table(style='width:100%')
     tr
       th Name
@@ -35,6 +37,7 @@ head
       th Arrival Time
       th Parking Time
       th Parking Fee
+      th Modify
     
     if parkings.length 
     each parking in parkings
@@ -45,4 +48,6 @@ head
       td #{parking.arrivaltime}
       td #{parking.parkingtime}
       td #{parking.parkingfee}
-     tr
+      td
+        a.btn.btn-primary(href="#") Edit
+        a.btn.btn-primary(href="#") Delete 
