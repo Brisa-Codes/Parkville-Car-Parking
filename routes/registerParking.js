@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const expressValidator = require('express-validator');
+
 const Parking = require('../models/parkingModel');
 
 router.use(expressValidator());
@@ -9,7 +10,7 @@ router.get('/parking', (req, res) => {
     res.render('registerParking');
 });
 
-// Post Route
+// Post 
 router.post('/registerParking', (req, res) => {
     const cartype = req.body.cartype;
     const name = req.body.name;
