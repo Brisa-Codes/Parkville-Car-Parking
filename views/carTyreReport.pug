@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Signedoff Cars || Parking
+  title Car Tyre Report || Parking
   script(src='https://kit.fontawesome.com/ec067d744e.js' crossorigin='anonymous')
   link(rel='stylesheet' href='/CSS/styles.css')
 .parking-nav
@@ -20,34 +20,35 @@ head
       span LogOut
 .parking-report
   .parking-report-details 
-    h3.parking-title Car Parking Entries
+    h3.parking-title Car Tyre Entries
     h3
       button.btn.btn-primary
-        a.nav-link(href='/signoffUser') New Entry
+        a.nav-link(href='/registercarTyre') New Entry
     h3
       button.btn.btn-primary(type='submit' onclick="window.print()") Print Report
   table.parking-table(style='width:100%')
     tr
-      th Name
-      th Receipt No
-      th Phone No
-      th Time
-      th Gender
-      th UserNIN 
+      th Name 
+      th Phone Number 
+      th Tyre size
+      th Pressure
+      th Puncture Fix
+      th Valve
       th Modify
+
     
-    if signoffUsers.length 
-    each signoffUser in signoffUsers
+    if cartyres.length 
+    each cartyre in cartyres
      tr
-      td #{signoffUser.name}
-      td #{signoffUser.receiptno}
-      td #{signoffUser.phonenumber}
-      td #{signoffUser.time}
-      td #{signoffUser.gender}
-      td #{signoffUser.nin}
-      td 
+      td #{cartyre.name}
+      td #{cartyre.phonenumber}
+      td #{cartyre.tyresize}
+      td #{cartyre.tyrepressure}
+      td #{cartyre.puncturefix}
+      td #{cartyre.valves}
+      td
         .modify-btn
           //- a.btn.btn-primary(href='#') Edit
-          form(method="get" action="/deletesignoffUser/"+signoffUser._id)
-            input(type="hidden" name="delete" value=signoffUser._id)
+          form(method="get" action="/deletecarTyre/"+cartyre._id)
+            input(type="hidden" name="delete" value=cartyre._id)
             button.btn-primary(type="submit" value="submit") Delete

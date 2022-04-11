@@ -8,7 +8,7 @@ head
   link(rel='stylesheet' href='/CSS/styles.css')
 .parking-nav
   .nav-wrapper
-    a.nav-link-logo(href='/')
+    a.nav-link-logo(href='#')
       i.fas.fa-car
       span Parkville
   .nav-wrapper-mid
@@ -42,5 +42,9 @@ head
       td #{battery.phonenumber}
       td #{battery.batteryfee}
       td
-          a.btn.btn-primary(href="#") Edit
-          a.btn.btn-primary(href="#") Delete 
+        .modify-btn
+          //- button.btn-primary(type="button") Edit
+          form(method="get" action="/deleteBattery/"+battery._id)
+            //- console.log(#{battery._id})
+            input(type="hidden" name="delete" value=battery._id)
+            button.btn-primary(type="submit" value="submit") Delete

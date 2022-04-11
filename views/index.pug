@@ -18,13 +18,15 @@ head
           i.fa-solid.fa-car
           h1 Welcome to Parkville
           p Your best car parking solutions
-        form(method='POST' action='/')
+        form(method='POST' onsubmit='return validateForm()' action='/')
           .form-group
             label(for='username') Email
             input#username.form-control(type='email' name='email' placeholder='Email')
+            span#usernameError
           .form-group
             label(for='password') Password
             input#password.form-control(type='password' name='password' placeholder='Password')
+            span#passwordError
           .form-pass
             a(href='#') Forgot Password?
           .form-group
@@ -32,3 +34,4 @@ head
           .login-btn
             a(href='/register') Don&apos;t have an account ?
     // Form End
+  script(src='/js/login.js')

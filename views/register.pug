@@ -18,19 +18,22 @@ head
           i.fa-solid.fa-car
           h1 Welcome to Parkville
           p Please Sign Up and Create your new account
-        form(method='POST' action='/register')
+        form(method='POST' onsubmit='return validateForm()' action='/register')
           .form-group
             label(for='username') Username
             input#username.form-control(type='text' name='username' placeholder='Your Name')
+            span#usernameError
           .form-group
-            label(for='username') Email
+            label(for='email') Email
             input#email.form-control(type='email' name='email' placeholder='Email')
+            span#emailError
           .form-group
             label(for='password') Password
             input#password.form-control(type='password' name='password' placeholder='Password')
-          .form-group
-            label(for='password') Comfirm Password
-            input#comfirm.form-control(type='password' name='comfirm' placeholder='Comfirm Password')
+            span#passwordError
+          br
           .form-group.call-btn
             button.btn.btn-primary(type='submit' name='register') Register
     // Form End
+  script(src='/js/registerUser.js')
+    

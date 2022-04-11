@@ -8,7 +8,7 @@ head
   link(rel='stylesheet' href='/CSS/styles.css')
 .parking-nav
   .nav-wrapper
-    a.nav-link-logo(href='/')
+    a.nav-link-logo(href='#')
       i.fas.fa-car
       span Parkville
   .nav-wrapper-mid
@@ -25,22 +25,25 @@ head
     h3 Register Car Tyres 
     fieldset
       label(for='name') Name
-      input(type='text' name='name')
+      input#name(type='text' name='name')
+      span#nameError
     fieldset
       label(for='phonenumber') Phone Number
-      input(type='text' name='phonenumber')
+      input#phonenumber(type='text' name='phonenumber')
+      span#phonenumberError
     fieldset
       label(for='make') Tyre Make
-      input(type='text' name='make')
+      input#make(type='text' name='make')
+      span#makeError
     fieldset
       label(for='tyresize') CarTyre Size
-      select#parkingfee(name='tyresize' type='text')
+      select#tyresize(name='tyresize' type='text')
         option(value='Default') Choose Car Tyre Fee
         option(value='R16') 125/70 R16
         option(value='R15') 135/70 R15
         option(value='R14') 145/80 R14
         option(value='R12') 145/80 R12
-    br
+      span#tyresizeError
     h3 Car Tyre Services
     br
     fieldset
@@ -49,19 +52,23 @@ head
         option(value='Default') Choose Car Tyre Pressure Fee
         option(value='500') 500 UGX
         option(value='') Null
+      span#tyrepressureError
     fieldset
       label(for='puncturefix') Puncture Fix Fee 
       select#puncturefix(name='puncturefix' type='number')
         option(value='Default') Choose Puncture fix Fee
         option(value='5000') 5000 UGX
         option(value='') Null
+      span#puncturefixError
     fieldset
       label(for='valves') Valve Fee 
       select#valves(name='valves' type='number')
         option(value='Default') Choose Value Fee
         option(value='5000') 5000 UGX
         option(value='') Null
+      span#valvesError
     br
     fieldset.form-btns
       button.btn.btn-primary(type='submit') Register
       button.btn.back-btn(type='reset') Clear
+  //- script(src='/js/carTyre.js')
