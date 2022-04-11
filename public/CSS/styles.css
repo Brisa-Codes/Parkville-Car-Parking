@@ -82,10 +82,10 @@ label {
 input {
     width: 85%;
     padding: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border: none;
     background: none;
-    border: 1px solid #6c6c6c;
+    border: 1px solid;
     border-radius: 8px;
     outline: none;
 }
@@ -236,8 +236,6 @@ button:hover {
     padding: 0 10px;
 }
 
-
-
 .dash-card {
     background-color: var(--secondary-color);
     border: 1px solid #000;
@@ -356,7 +354,7 @@ select {
 tr {
     display: flex;
     justify-content: space-between;
-    padding: 10px 100px;
+    padding: 10px;
 }
 
 th {
@@ -377,4 +375,22 @@ td {
 
 tbody {
     width: 100%;
+}
+
+.modify-btn {
+    display: flex;
+}
+
+.modify-btn a {
+    padding: 0 10px;
+}
+
+span {
+    font-size: 14px;
+}
+
+fieldset span {
+    font-size: 12px;
+    font-weight: 400;
+    /* color: red; */
 }
