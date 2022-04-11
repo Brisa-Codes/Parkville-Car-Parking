@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking</title>
+    <script src="https://kit.fontawesome.com/ec067d744e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+</head>
+<body>
+    <div class="parking-nav">
+        <div class="nav-wrapper">
+            <a class="nav-link-logo" href="/">
+                <i class="fas fa-car"></i>
+                <span>Parkville</span>
+            </a>
+        </div>
+        <div class="nav-wrapper-mid">
+            <a class="nav-link" href="/login.pug">
+                <span>Home</span>
+            </a>
+            <a class="nav-link" href="/login.pug">
+                <span>Customer Details</span>
+            </a>
+        </div>
+        <div class="nav-wrapper-log">
+            <a href="/login">
+                <i class="fas fa-power-off"></i>
+                <span>LogOut</span>
+            </a>
+        </div>
+    </div>
+    <div class="parking-form-wrapper">
+        <form action="">
+            <h3>Register Parking</h3>
+            <fieldset>
+                <label for="cartype">Car Type</label>
+                <select name="cartype" id="cartype">
+                    <option value="" required>Select Car Type</option>
+                    <option value="trucks">Trucks</option>
+                    <option value="personalCars">Personal Cars</option>
+                    <option value="taxis">Taxis</option>
+                    <option value="coasters">Coasters</option>
+                    <option value="bodas">Boda Bodas</option>
+                </select>
+            </fieldset>
+            <br>
+           <fieldset>
+            <label for="name">Name</label>
+            <input type="text">
+           </fieldset>
+            <fieldset>
+                <label for="name">No. Plate</label>
+                 <input type="number">
+            </fieldset>
+            <fieldset>
+                <label for="name">Phone Number</label>
+                <input type="number">
+            </fieldset>
+            <fieldset>
+                <label for="name">Time of Arrival</label>
+                <input type="datetime-local">
+            </fieldset>
+            <fieldset>
+                <label for="name">Time of Exit</label>
+                <input type="datetime-local">
+            </fieldset>
+            <fieldset>
+                <label for="model">Model</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <label for="color">color</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <label for="timeparking">Time of Parking</label>
+                <select name="timeparking" id="timeparking" type="text">
+                    <option value="" required>Select Time of Parking</option>
+                    <option value="day">Day</option>
+                    <option value="night">Night</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="parkingfee">Parking Fee</label>
+                <select name="parkingfee" id="parkingfee" type="number">
+                    <option value="" required>Choose Parking Fee</option>
+                    <option value="1000">1,000 UGX</option>
+                    <option value="2000">2,000 UGX</option>
+                    <option value="3000">3,000 UGX</option>
+                    <option value="4000">4,000 UGX</option>
+                    <option value="5000">5,000 UGX</option>
+                    <option value="10,000">10,000 UGX</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset class="form-btns">
+                <button type="submit" name="login" class="btn btn-primary">Login</button>
+                <button type="submit" name="login" class="btn back-btn">Clear</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

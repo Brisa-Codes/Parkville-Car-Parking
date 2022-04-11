@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkville || Parking App</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-wrapper">
+
+            <!--Login Image -->
+            <div class="car-img">
+                <img src="/publiC/IMG/car.png" alt="car">
+            </div>
+
+            <!-- Form -->
+            <div class="login-wrapper">
+                <div class="login-form">
+                    <div class="login-intro">
+                        <i class="fa-solid fa-car"></i>
+                        <h1>Welcome to Parkville</h1>
+                        <p>Your best car parking solutions</p>
+                    </div>
+                    <form method="post" action="/user/login">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" class="form-control"
+                                placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group call-btn">
+                            <button type="submit" name="login" class="btn btn-primary">Login</button>
+                        </div>
+                        <div class="form-pass">
+                            <a href="#">Forgot Password?</a>
+                            <a class="register-btn" href="/register">Don't have an account ?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--Form End-->
+        </div>
+    </div>
+</body>
+
+</html>

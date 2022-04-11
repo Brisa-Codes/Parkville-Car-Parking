@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Off || Parkville</title>
+    <script src="https://kit.fontawesome.com/ec067d744e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+</head>
+<body>
+    <div class="parking-nav">
+        <div class="nav-wrapper">
+            <a class="nav-link-logo" href="/">
+                <i class="fas fa-car"></i>
+                <span>Parkville</span>
+            </a>
+        </div>
+        <div class="nav-wrapper-mid">
+            <a class="nav-link" href="/">
+                <span>Home</span>
+            </a>
+            <a class="nav-link" href="/parkingreport">
+                <span>Parking Details</span>
+            </a>
+        </div>
+        <div class="nav-wrapper-log">
+            <a href="/">
+                <i class="fas fa-power-off"></i>
+                <span>LogOut</span>
+            </a>
+        </div>
+    </div>
+    <div class="parking-form-wrapper">
+        <form method="POST" action="/signoff">
+            <h3>Sign Off a Parking Client</h3>
+            <br>
+           <fieldset>
+                <label for="name">Name</label>
+                <input type="text">
+           </fieldset>
+           <fieldset>
+                <label for="receiptno">Receipt No.</label>
+                <input type="number">
+            </fieldset>
+            <fieldset>
+                <label for="name">Phone Number</label>
+                <input type="number">
+            </fieldset>
+            <fieldset>
+                <label for="name">Time & Date</label>
+                <input type="datetime-local">
+            </fieldset>
+            <fieldset>
+                <label for="gender">Gender</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <label for="nin">NIN</label>
+                <input type="text">
+            </fieldset>
+            <fieldset class="form-btns">
+                <button type="submit" name="login" class="btn btn-primary">Login</button>
+                <button type="submit" name="login" class="btn back-btn">Clear</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
