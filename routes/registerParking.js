@@ -53,4 +53,17 @@ router.post('/registerParking', (req, res) => {
     }
 });
 
+// Delete parking entry
+router.get('/deleteVehicle/:id', async(req, res)=> {
+    try{
+      const register = await Register.findById(req.params.id)
+      await Register.deleteOne({_id:req.params.id})
+      res.redirect('/parkingReport');
+    }
+   
+    catch{
+          res.status(400).send('Unable to delete Vehicle from database');
+        }
+    });
+
 module.exports = router;

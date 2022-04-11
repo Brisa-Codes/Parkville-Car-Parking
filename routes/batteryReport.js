@@ -25,4 +25,15 @@ router.get('/batteryreport', async(req, res) => {
     }
 });
 
+// Delete User from Battery Report
+router.get('/deleteBattery/:id', async(req, res) => {
+    try {
+        await Battery.deleteOne({_id: req.params.id})
+        res.redirect('back')
+    }
+    catch(error) {
+        res.status(400).send('Unable TO delete Entry')
+    }
+})
+
 module.exports = router;

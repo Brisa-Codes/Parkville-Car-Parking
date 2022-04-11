@@ -18,4 +18,15 @@ router.get('/signoffReport', async(req, res) => {
     }
 });
 
+// delete signed off users/entry
+router.get('/deletesignOffUser/:id', async(req, res) => {
+    try {
+        await SignoffUser.deleteOne({_id: req.params.id})
+        res.redirect('back')
+    }
+    catch(error) {
+        res.status(400).send('Unable to delete Signoff Entry')
+    }
+  })
+
 module.exports = router;

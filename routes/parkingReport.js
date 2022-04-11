@@ -23,4 +23,15 @@ router.get('/parkingreport', async(req,res)=>{
     }
 });
 
+// Delete Parking entry from Parking Report
+router.get('/deleteParking/:id', async(req, res) => {
+  try {
+      await Parking.deleteOne({_id: req.params.id})
+      res.redirect('back')
+  }
+  catch(error) {
+      res.status(400).send('Unable to delete Entry')
+  }
+});
+
 module.exports = router;
